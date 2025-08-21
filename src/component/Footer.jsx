@@ -21,15 +21,15 @@ const Footer = () => {
                     {/* contact */}
                     <div className='text-start space-y-2'>
                         <span className='flex items-center gap-2'>
-                            <img src={location} alt="" />
+                            <img src={location} alt="location" />
                             <p>95 Tinubu Estate,Lekki,Lagos</p>
                         </span>
                         <span className='flex items-center gap-4'>
-                            <img src={call} alt="" />
+                            <img src={call} alt="call" />
                             <p className=''>+234 675 8935 675</p>
                         </span>
                         <span className='flex items-center gap-2'>
-                            <img src={message} alt="" />
+                            <img src={message} alt="inbox" />
                             <p>support@rentbetaHouse.com</p>
                         </span>
                     </div>
