@@ -4,6 +4,7 @@ import filterIcon from '../assets/filter-Icon.png'
 import locationIcon from '../assets/location-icon.png'
 import bedIcon from '../assets/bedIcon.png'
 import bathIcon from '../assets/Bathicon.png'
+// src/assets/Bathicon.png
 import linkIcon from '../assets/Link.png'
 import shareIcon from '../assets/share-icon.png'
 import loveIcon from '../assets/Love-icon.png'
@@ -69,7 +70,7 @@ const Properties = () => {
                             <div className=''>
                                 {/* image */}
                                 <span className='rounded-t-md min-w-[200%] md:max-size-[230px]'>
-                                 <img src={property.image} alt="" className='min-w-[100%] max-h-[200px] rounded-t-md'/>
+                                 <img src={property.image} alt="img" className='min-w-[100%] max-h-[200px] rounded-t-md'/>
                                 </span>
                                     {/* details */}
                                 <div className='px-5 pb-5 pt-3 flex flex-col  gap-4 border-2 border-gray-200 border-t-0 rounded-b-md'>
@@ -79,18 +80,18 @@ const Properties = () => {
 
                                         {/* location */}
                                         <div className='flex gap-2 text-gray-500 text-[12px]'>
-                                           <span className='size-[10px] grid place-items-center place-content-center pt-2'><img src={locationIcon} alt="" className='w-[8px]' /></span> 
+                                           <span className='size-[10px] grid place-items-center place-content-center pt-2'><img src={locationIcon} alt="img" className='w-[8px]' /></span> 
                                            <span><p className=''>{property.location}</p></span>
                                         </div>
                                     </span>
                                     {/* bathroom/bedroom */}
                                     <div className='flex w-[80%] justify-between text-gray-500 text-[12px]'>
                                         <span className='flex gap-2 items-center'>
-                                            <span className='size-[18px]'><img src={bedIcon} alt="" /></span>
+                                            <span className='size-[18px]'><img src={bedIcon} alt="img" /></span>
                                             <p className='font-semibold'>{property.description.bedRoom}  Bedrooms</p>
                                         </span>
                                         <span className='flex gap-2 items-center'>
-                                             <span className='size-[18px]'><img src={bathIcon} alt="" /></span>
+                                             <span className='size-[18px]'><img src={bathIcon} alt="img" /></span>
                                              <p  className='font-semibold'>{property.description.bathRoom}  Bathrooms</p>
                                         </span>
                                     </div>
@@ -136,7 +137,7 @@ const Properties = () => {
                     Api.map((carousel)=>(
                         <div key={carousel.price}>
                         <div className='flex gap-2'>
-                                <span className='w-full'><img src={carousel.img} alt="" className='min-h-[170px] min-w-[50px] md:min-h-[230px] md:max-h-[300px] max-w-full  rounded-lg'/></span>
+                                <span className='w-full'><img src={carousel.img} alt="img" className='min-h-[170px] min-w-[50px] md:min-h-[230px] md:max-h-[300px] max-w-full  rounded-lg'/></span>
                         </div>
                         </div>
                     ))
