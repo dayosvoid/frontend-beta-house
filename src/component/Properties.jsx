@@ -3,7 +3,7 @@ import Api from "../data/Carosel.data"
 import filterIcon from '../assets/filter-Icon.png'
 import locationIcon from '../assets/location-icon.png'
 import bedIcon from '../assets/bedIcon.png'
-import bathIcon from 'src/assets/BathIcon.png'
+import bathIcon from '../assets/Bathicon.png'
 import linkIcon from '../assets/Link.png'
 import shareIcon from '../assets/share-icon.png'
 import loveIcon from '../assets/Love-icon.png'
