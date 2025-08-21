@@ -13,7 +13,7 @@ const Footer = () => {
             <div className='flex flex-col md:flex-row gap-10 text-center md:text-start items-center md:items-start md:justify-between pb-5'>
                 <div className='flex flex-col gap-5 w-full items-center md:t md:w-[50%] md:items-start '>
                     {/* logo */}
-                    <span className='max-w-[130px] md:min-w-[180px]'><img src={logo} alt="" className='size-[]'/></span>
+                    <span className='max-w-[130px] md:min-w-[180px]'><img src={logo} alt="logo"/></span>
                     {/* long note */}
                     <span>
                         <p>Discover, rent, and find your ideal home hassle-free with BetaHouse. Take control of your rental journey today!</p>
