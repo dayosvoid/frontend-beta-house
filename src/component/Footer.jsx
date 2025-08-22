@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "../assets/logo.png"
 import message from "../assets/footer/message.png"
-import location from "../assets/footer/icon.png"
+import icon from "../assets/footer/icon.png"
 import call from "../assets/footer/call.png"
 
 
@@ -21,7 +21,7 @@ const Footer = () => {
                     {/* contact */}
                     <div className='text-start space-y-2'>
                         <span className='flex items-center gap-2'>
-                            <img src={location} alt="location" />
+                            <img src={icon} alt="location" />
                             <p>95 Tinubu Estate,Lekki,Lagos</p>
                         </span>
                         <span className='flex items-center gap-4'>
