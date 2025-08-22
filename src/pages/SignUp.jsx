@@ -4,80 +4,94 @@ import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const SignUp = () => {
-    const navigate = useNavigate()
-    const initialState = {
-        firstName:"",
-        lastName:"",
-        email:"",
-        password:"",
-        confirmPassword:"",
+  const navigate = useNavigate()
+const initialState = {
+    firstName: "",
+    lastName: "",
+    email: "",
+    password: "",
+    confirmPassword: "",
+}
+const [formValue, setFormValue] = useState(initialState)
+const [error, setError] = useState({})
+const [isSubmit, setIsSubmit] = useState(false)
+const [loader, setLoader] = useState(false)
+
+const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormValue({ ...formValue, [name]: value })
+    
+    // Clear specific field error when user starts typing
+    if (error[name]) {
+        setError({ ...error, [name]: "" })
     }
-    const [formValue,setFormValue]=useState(initialState)
-    const [error,seterror]=useState({})
-    const [isSubmit,setIsSubmit] = useState(false)
+    console.log(formValue);
+}
 
+const handleSubmit = (e) => {
+    e.preventDefault()
+    const validationErrors = validate(formValue)
+    setError(validationErrors)
+    setIsSubmit(true)
+}
 
-
-
-    const handleChange=(e)=>{
-        const {name,value} = e.target;
-        setFormValue({...formValue, [name]: value })
-        // setIsSubmit(false)
-        console.log(formValue);
+useEffect(() => {
+    if (isSubmit) {
+        // Only submit if there are no validation errors
+        if (Object.keys(error).length === 0) {
+            setLoader(true)
+            axios.post("https://backend-beta-house.onrender.com/user/register", formValue)
+                .then(result => {
+                    console.log(result)
+                    setLoader(false)
+                    navigate('/login')
+                })
+                .catch(err => {
+                    console.log(err)
+                    setLoader(false)
+                    // Handle server errors here
+                })
+        }
+        setIsSubmit(false) // Reset submission state
     }
- 
-    const handleSubmit = (e)=>{
-        e.preventDefault()
-        seterror(validate(formValue))
-        setIsSubmit(true)
-    }
-    useEffect(() => {
-        if(isSubmit){
-            axios.post("https://backend-beta-house.onrender.com/user/register",formValue)
-            .then(result => {console.log(result)
-                navigate('/login')
-            })
-            .catch(err => console.log(err))}
-        }, [error])
-    const validate = (value)=>{
-        const error = {};
-        const regex= /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+}, [isSubmit, error]) // Depend on both isSubmit and error
 
-        if (!value.firstName) {
+const validate = (value) => {
+    const error = {};
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+
+    if (!value.firstName) {
         error.firstName = "First name is required!"
     } else if (value.firstName.length < 3) {
         error.firstName = 'First name is too short'
     }
 
-        if (!value.lastName) {
+    if (!value.lastName) {
         error.lastName = "Last name is required!"
-    } else if (value.lastName.length < 3) {  
+    } else if (value.lastName.length < 3) {
         error.lastName = 'Last name is too short'
     }
 
- if (!value.email) {
+    if (!value.email) {
         error.email = "Email is required"
     } else if (!regex.test(value.email)) {
         error.email = "Invalid Email"
     }
-        
 
-         if (!value.password) {
+    if (!value.password) {
         error.password = "Password is required"
     } else if (value.password.length < 8) {
-        error.password = "Password is too short"
+        error.password = "Password must be 8 characters long"
     }
-        
+
     if (!value.confirmPassword) {
         error.confirmPassword = "Please confirm password"
     } else if (value.confirmPassword !== value.password) {
         error.confirmPassword = "Passwords don't match"
     }
 
-
-        return error
-
-    }
+    return error
+}
     
   return (
     <div className='md:relative h-full md:min-h-screen'>
