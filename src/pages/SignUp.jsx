@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import google  from '../assets/Sign-in'
-import { Link } from 'react-router-dom'
+import google  from '../assets/signin/google.png'
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
