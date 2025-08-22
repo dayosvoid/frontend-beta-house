@@ -105,7 +105,7 @@ const validate = (value) => {
                     {/* first name */}
                     <div className='relative w-full'>
                         <label htmlFor="" className='font-semibold text-gray-500 text-sm  w-full relative'> First Name
-                            <input type="text" placeholder='Enter Name' name="firstName" value={formValue.firstName} onChange={handleChange} className='border-2 text-[16px] font-light border-gray-300 rounded-md py-1 pl-2 w-full'/>
+                            <input type="text" placeholder='Enter Name' name="firstName" value={formValue.firstName} onChange={handleChange} className='border-2 text-[16px] focus:border-[hsla(153,43%,42%,1)] focus:outline-none border-gray-300 rounded-md py-1 pl-2 w-full'/>
                         </label>
                         <p className='error'>{error.firstName}</p>
                     </div>
@@ -114,7 +114,7 @@ const validate = (value) => {
                     {/* last name */}
                     <div className='relative w-full'>
                         <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'> Last Name
-                            <input type="text" placeholder='Enter Name' name="lastName" value={formValue.lastName} onChange={handleChange} className='border-2 text-[16px] font-light border-gray-300 rounded-md py-1 pl-2 w-full'/>
+                            <input type="text" placeholder='Enter Name' name="lastName" value={formValue.lastName} onChange={handleChange} className='border-2 text-[16px] focus:border-[hsla(153,43%,42%,1)] focus:outline-none border-gray-300 rounded-md py-1 pl-2 w-full'/>
                         </label>
                          <p className='error'>{error.lastName}</p>
                     </div>
@@ -124,7 +124,7 @@ const validate = (value) => {
                     {/* email */}
                     <div className='relative'>
                         <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'>Email
-                            <input type="email" placeholder='Enter your Email' name="email" value={formValue.email} onChange={handleChange} className='border-2 text-[16px] font-light border-gray-300 rounded-md py-1 pl-2 w-full'/>
+                            <input type="email" placeholder='Enter your Email' name="email" value={formValue.email} onChange={handleChange} className='border-2 text-[16px] focus:border-[hsla(153,43%,42%,1)] focus:outline-none border-gray-300 rounded-md py-1 pl-2 w-full'/>
                         </label>
                             <p className='error'>{error.email}</p>
 
@@ -133,7 +133,7 @@ const validate = (value) => {
                     {/* password */}
                     <div className='relative'>
                         <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'>Password
-                            <input type="password" placeholder='Enter your password' name="password" value={formValue.password} onChange={handleChange} className='border-2 text-[16px] font-light border-gray-300 rounded-md py-1 pl-2 w-full' />
+                            <input type="password" placeholder='Enter your password' name="password" value={formValue.password} onChange={handleChange} className='border-2 text-[16px] focus:border-[hsla(153,43%,42%,1)] focus:outline-none border-gray-300 rounded-md py-1 pl-2 w-full' />
                         </label>
                             <p className='error'>{error.password}</p>
 
@@ -142,7 +142,7 @@ const validate = (value) => {
                     {/* confirm password */}
                     <div className='relative'>
                         <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'>Confirm Password
-                            <input type="password" placeholder='comfirm your password' name="confirmPassword" value={formValue.confirmPassword} onChange={handleChange} className='border-2 font-light text-[16px] border-gray-300 rounded-md py-1 pl-2 w-full' />
+                            <input type="password" placeholder='comfirm your password' name="confirmPassword" value={formValue.confirmPassword} onChange={handleChange} className='border-2 focus:border-[hsla(153,43%,42%,1)] focus:outline-none text-[16px] border-gray-300 rounded-md py-1 pl-2 w-full' />
                         </label>
                             <p className='error'>{error.confirmPassword}</p>
                     </div>
