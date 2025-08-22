@@ -64,7 +64,7 @@ const SignUp = () => {
 
          if (!value.password) {
         error.password = "Password is required"
-    } else if (value.password.length < 6) {
+    } else if (value.password.length < 8) {
         error.password = "Password is too short"
     }
         
