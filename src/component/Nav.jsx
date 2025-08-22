@@ -32,8 +32,8 @@ const Nav = () => {
                 
                 {/*(login/ sign up)  */}
                 <div className='space-x-2 font-semibold hidden  md:flex w-full flex items-center justify-end'>
-                    <Link to='/signUp' className=''> <button   className='text-white hover:text-black   cursor-pointer py-1 px-4 border border-white rounded-md text-nowrap'>Sign Up</button></Link>
-                   <Link to='/login' className=''> <button   className='bg-[hsla(153,43%,42%,1)] hover:bg-[hsla(153,43%,42%,1)] cursor-pointer py-1.5 px-5 rounded-md text-white font-semibold'>Login</button></Link>
+                    <Link to='/signUp' className=''> <button   className='text-white hover:text-[hsla(153,43%,42%,1)]   cursor-pointer py-1 px-4 border border-white rounded-md text-nowrap'>Sign Up</button></Link>
+                   <Link to='/login' className=''> <button   className='bg-[hsla(153,43%,42%,1)] hover:bg-[hsla(153,45%,71%,1.00)] cursor-pointer py-1.5 px-5 rounded-md text-white font-semibold'>Login</button></Link>
                 </div>
             </div>
 

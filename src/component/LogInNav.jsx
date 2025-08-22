@@ -29,7 +29,7 @@ const LoginNav = () => {
                <div className='flex items-center justify-end w-full gap-3'>
                    <span className='md:border-4 border-3  border-gray-100 rounded-full'><img src={user} alt="" className='md:size-12 size-6 rounded-full'/></span>
                    <p className='text-[14px] hidden md:flex font-semibold text-white'>Micheal Idioha</p>
-                   <button className='text-gray-700 ' onClick={()=>setMenu(!menu)}>{menu?<ChevronUp className='text-white'/>:<ChevronDown className='text-white'/>}</button>
+                   <button className='text-gray-700 cursor-not-allowed' onClick={()=>setMenu(!menu)}>{menu?<ChevronUp className='text-white'/>:<ChevronDown className='text-white'/>}</button>
                    
                    {/* (login/ sign up) 
                    <div className='space-x-3 font-semibold hidden  md:flex w-full flex justify-end'>
