@@ -97,10 +97,10 @@ const SignIn = () => {
                     <h2 className='font-bold text-center text-gray-800'>Welcome Back to BetaHouse!</h2>
                     <p className='text-[12px] text-center font-semibold text-gray-500'>Let's get started by filling out the information below</p>
                     
-                    <form onSubmit={handleSubmit} className='pt-5 w-full max-w-md space-y-4'>
+                    <form onSubmit={handleSubmit} className='pt-5 relative w-full max-w-md space-y-4'>
                         {/* API Error/Success Message */}
                         {errors.api && (
-                            <div className={`text-center p-3 rounded-md ${
+                            <div className={`text-center absolute w-[50%] left-1/2 -translate-x-1/2 top-[-2px] p-1 rounded-md ${
                                 errors.api.type === 'success' 
                                     ? 'bg-green-100 text-green-700 border border-green-300' 
                                     : 'bg-red-100 text-red-700 border border-red-300'
@@ -146,7 +146,7 @@ const SignIn = () => {
                         </div>
                         
                         {/* Remember Me */}
-                        <div className='flex font-semibold text-gray-500 text-sm gap-2 py-2'>
+                        <div className='flex font-semibold cursor-not-allowed text-gray-500 text-sm gap-2 py-2'>
                             <input type="checkbox" name="rememberMe" id="rememberMe" disabled={isLoading} />
                             <label htmlFor="rememberMe">Remember Me</label>
                         </div>
@@ -174,7 +174,7 @@ const SignIn = () => {
                         <button 
                             type='button' 
                             disabled={isLoading}
-                            className={`py-2.5 border-2 font-semibold w-full rounded-md transition-colors ${
+                            className={`py-2.5 border-2 font-semibold w-full cursor-not-allowed rounded-md transition-colors ${
                                 isLoading 
                                     ? 'border-gray-300 text-gray-400 cursor-not-allowed' 
                                     : 'border-gray-500 text-gray-500 hover:bg-gray-50'

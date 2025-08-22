@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import google  from '../assets/signin/google.png'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 
 const SignUp = () => {
@@ -126,7 +126,7 @@ const SignUp = () => {
                     </div>
                     
                     {/* terms of service */}
-                    <span className='flex font-semibold text-gray-500 text-sm gap-2 py-2'>
+                    <span className='flex cursor-not-allowed font-semibold text-gray-500 text-sm gap-2 py-2'>
                         <input type="checkbox" name="" id="" />
                         <p>I agree to <span className='text-[hsla(153,43%,42%,1)] '>terms of sevice</span> and <span className='text-[hsla(153,43%,42%,1)] '>privacy policies</span></p>
                     </span>
@@ -139,7 +139,7 @@ const SignUp = () => {
                     <span className='border-t border-gray-500 w-full'></span>
                 </div>
                 {/* google */}
-                <button className=' py-1.5 border-2 border-gray-500 text-gray-500 font-semibold w-full rounded-md '>
+                <button className=' py-1.5 cursor-not-allowed border-2 border-gray-500 text-gray-500 font-semibold w-full rounded-md '>
                     <span className='flex gap-3 w-full justify-center items-center text-sm py-1'>
                         <img src={google} alt="" className='size-4' />
                         <p>Continue with Google</p>
@@ -149,7 +149,7 @@ const SignUp = () => {
 
                 {/* OR/hr */}
 
-             <p className='w-full text-center font-semibold text-[12px] text-gray-500 py-5'>Already have an account? <span className='text-[hsla(153,43%,42%,1)]'>Sign in</span></p>
+             <p className='w-full text-center font-semibold text-[12px] text-gray-500 py-5'>Already have an account? <Link to='/login'><span className='text-[hsla(153,43%,42%,1)]'>Sign in</span></Link></p>
             </div>
             {/*the image for desktop  */}
             <div className=' hidden md:flex w-[50%]'>

@@ -71,7 +71,7 @@ const Properties = () => {
       {/* Header */}
       <div className="flex justify-between items-center text-[12px] md:text-[16px] py-4">
         <div className="md:flex gap-3">
-          <button className="flex gap-2 justify-center items-center">
+          <button className="flex cursor-not-allowed gap-2 justify-center items-center">
             <img
               src={filter}
               alt=""
@@ -84,7 +84,7 @@ const Properties = () => {
             </p>   
         </div>
         <div className="md:flex gap-3">
-          <button className="flex items-center">
+          <button className="flex cursor-not-allowed items-center">
             Default <ChevronDown className="size-[14px] md:size-[20px]" />
           </button>
         </div>
@@ -114,9 +114,9 @@ const Properties = () => {
 
             {/* the three images on the picture */}
             <div className="absolute flex gap-3 right-2 bottom-[50%]">
-                <span className="bg-white/40 p-2 rounded-md"><img src={chain} alt="" /></span>
-                <span className="bg-white/40 p-2 rounded-md"><img src={cam} alt="" /></span>
-                <span className="bg-white/40 p-2 rounded-md"><img src={img} alt="" /></span>
+                <span className="bg-white/40 cursor-not-allowed p-2 rounded-md"><img src={chain} alt="" /></span>
+                <span className="bg-white/40 cursor-not-allowed p-2 rounded-md"><img src={cam} alt="" /></span>
+                <span className="bg-white/40 cursor-not-allowed p-2 rounded-md"><img src={img} alt="" /></span>
             </div>
             <div>
               {/* image */}
@@ -170,13 +170,13 @@ const Properties = () => {
                     <p>N {property.price}</p>
                   </div>
                   <div className="flex justify-between w-[50%]">
-                    <span>
+                    <span className="cursor-not-allowed">
                       <img src={link} alt="" />
                     </span>
-                    <span>
+                    <span className="cursor-not-allowed">
                       <img src={share} alt="" />
                     </span>
-                    <span>
+                    <span className="cursor-not-allowed">
                       <img src={love} alt="" />
                     </span>
                   </div>
@@ -193,7 +193,7 @@ const Properties = () => {
           <button
             key={pageIndex}
             onClick={() => setPageNum(pageIndex)}
-            className={`px-3 py-1 rounded ${
+            className={`px-3 py-1 rounded cursor-pointer ${
               pageNum === pageIndex
                 ? "bg-green-600 text-white"
                 : "bg-gray-200 hover:bg-gray-300"
@@ -206,8 +206,8 @@ const Properties = () => {
 
       {/* Popular Properties Carousel */}
       <div className="flex flex-col px-[20px] justify-center items-center gap-10 relative">
-        <div className="absolute right-[0%] top-1/2 translate-y-1/2 "><img src={arrow} alt="" className="size-[40px]" /></div>
-        <div className="absolute left-[0%] top-1/2 translate-y-1/2"><img src={arrowww} alt="" className="size-[40px]"/></div>
+        <div className="absolute right-[0%] top-1/2 translate-y-1/2 cursor-not-allowed "><img src={arrow} alt="" className="size-[40px]" /></div>
+        <div className="absolute left-[0%] top-1/2 translate-y-1/2 cursor-not-allowed"><img src={arrowww} alt="" className="size-[40px]"/></div>
         <h2 className="font-semibold text-2xl md:text-4xl text-center">
           Discover Our Popular Properties
         </h2>

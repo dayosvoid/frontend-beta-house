@@ -17,12 +17,12 @@ const LoginNav = () => {
                    <span className='max-w-[130px] md:min-w-[180px]'><img src={logo} alt="logo" className='cursor-not-allowed'/></span>   
                </div>
    
-                    <ul className='hidden md:flex md:text-[16px] lg-[25px] md:space-x-4 lg:space-x-2  flex font-semibold text-white items-center md:justify-between w-full' >
-                       <li className='hover:text-black cursor-not-allowed text-nowrap'>Home</li>
-                       <li className='hover:text-black cursor-not-allowed text-nowrap'>Properties</li>
-                       <li className='hover:text-black cursor-not-allowed text-nowrap'>About us</li>
-                       <li className='hover:text-black cursor-not-allowed text-nowrap'>Blog</li>
-                       <li className='hover:text-black cursor-not-allowed text-nowrap'>Contact Us</li>
+                    <ul className='hidden md:flex md:text-[16px] lg-[25px] md:space-x-3 lg:space-x-5  flex font-semibold text-white items-center md:justify-between w-full'>
+                       <li className='hover:text-[hsla(153,43%,42%,1)] cursor-not-allowed text-nowrap'>Home</li>
+                       <li className='hover:text-[hsla(153,43%,42%,1)] cursor-not-allowed text-nowrap'>Properties</li>
+                       <li className='hover:text-[hsla(153,43%,42%,1)] cursor-not-allowed text-nowrap'>About us</li>
+                       <li className='hover:text-[hsla(153,43%,42%,1)] cursor-not-allowed text-nowrap'>Blog</li>
+                       <li className='hover:text-[hsla(153,43%,42%,1)] cursor-not-allowed text-nowrap'>Contact Us</li>
                    </ul>
    
                {/* menu (right section)(login/ sign up) */}

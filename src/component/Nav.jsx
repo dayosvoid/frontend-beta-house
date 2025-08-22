@@ -19,11 +19,11 @@ const Nav = () => {
             </div>
 
                  <ul className='hidden md:flex md:text-[16px] lg-[25px] md:space-x-3 lg:space-x-5  flex font-semibold text-white items-center md:justify-between w-full' >
-                    <li className='hover:text-black cursor-not-allowed text-nowrap'>Home</li>
-                    <li className='hover:text-black cursor-not-allowed text-nowrap'>Properties</li>
-                    <li className='hover:text-black cursor-not-allowed text-nowrap'>About us</li>
-                    <li className='hover:text-black cursor-not-allowed text-nowrap'>Blog</li>
-                    <li className='hover:text-black cursor-not-allowed text-nowrap'>Contact Us</li>
+                    <li className=' cursor-not-allowed text-nowrap'>Home</li>
+                    <li className='cursor-not-allowed text-nowrap'>Properties</li>
+                    <li className=' cursor-not-allowed text-nowrap'>About us</li>
+                    <li className=' cursor-not-allowed text-nowrap'>Blog</li>
+                    <li className=' cursor-not-allowed text-nowrap'>Contact Us</li>
                 </ul>
 
             {/* menu (right section)(login/ sign up) */}
@@ -32,8 +32,8 @@ const Nav = () => {
                 
                 {/*(login/ sign up)  */}
                 <div className='space-x-2 font-semibold hidden  md:flex w-full flex items-center justify-end'>
-                    <Link to='/signUp' className=''> <button   className='text-white hover:text-black  cursor-not-allowed  py-1 px-4 border border-white rounded-md text-nowrap'>Sign Up</button></Link>
-                   <Link to='/login' className=''> <button   className='bg-[hsla(153,43%,42%,1)] hover:bg-[hsla(153,43%,42%,1)] cursor-not-allowed py-1.5 px-5 rounded-md text-white font-semibold'>Login</button></Link>
+                    <Link to='/signUp' className=''> <button   className='text-white hover:text-black   cursor-pointer py-1 px-4 border border-white rounded-md text-nowrap'>Sign Up</button></Link>
+                   <Link to='/login' className=''> <button   className='bg-[hsla(153,43%,42%,1)] hover:bg-[hsla(153,43%,42%,1)] cursor-pointer py-1.5 px-5 rounded-md text-white font-semibold'>Login</button></Link>
                 </div>
             </div>
 
@@ -43,11 +43,11 @@ const Nav = () => {
             menu && 
             <div className='flex flex-col gap-8 text-white bg-[hsla(152,43%,19%,0.80)] font-bold text-center w-full py-10 px-5 absolute rounded-md rounded-b-r-full md:hidden z-2'>
                 <ul className='space-y-4' >
-                     <li className='hover:text-black cursor-not-allowed'>Home</li>
-                    <li className='hover:text-black cursor-not-allowed'>Properties</li>
-                    <li className='hover:text-black cursor-not-allowed'>About us</li>
-                    <li className='hover:text-black cursor-not-allowed'>Blog</li>
-                    <li className='hover:text-black cursor-not-allowed'>Contact Us</li>
+                     <li className=' cursor-not-allowed'>Home</li>
+                    <li className='cursor-not-allowed'>Properties</li>
+                    <li className=' cursor-not-allowed'>About us</li>
+                    <li className=' cursor-not-allowed'>Blog</li>
+                    <li className=' cursor-not-allowed'>Contact Us</li>
                 </ul>
                {/* the thin horizontal line  in the dropdown menu  */}
                <div className='w-full border border-gray-600 '></div>

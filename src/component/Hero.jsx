@@ -36,15 +36,15 @@ const Hero = () => {
                         <span className='py-1  border-b md:border-none border-black flex flex-col justify-center items-center'>
                             <h1 className='font-semibold pb-1'>BEDROOM</h1>
                             <div className='flex justify-between items-center text-center w-20'>
-                                    <p className='border border-2 border-black px-1.5 rounded-full'>+</p>
+                                    <p className='border cursor-not-allowed border-2 border-black px-2 rounded-full'>+</p>
                                     <p>0</p>
-                                    <p className='border border-2 border-black px-2 rounded-full self-center'>-</p>
+                                    <p className='border cursor-not-allowed border-2 border-black px-2 rounded-full self-center'>-</p>
                             </div>
                         </span>
 
                         
                     </div>
-                    <button className='bg-[hsla(153,43%,42%,1)] text-white font-semibold py-2 md:w-[30%]'>Find Property</button>
+                    <button className='bg-[hsla(153,43%,42%,1)] cursor-not-allowed text-white font-semibold py-2 md:w-[30%]'>Find Property</button>
                 </div>
             </div>
         </div>
