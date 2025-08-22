@@ -89,44 +89,52 @@ const SignUp = () => {
                 <form onSubmit={handleSubmit}className='pt-5 space-y-1.5 text-[16px] w-full '>
                    <div className='flex gap-4 w-full '>
                     {/* first name */}
-                    <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'> First Name
-                        <input type="text" placeholder='Enter Name' name="firstName" value={formValue.firstName} onChange={handleChange} className='border-2 border-gray-300 rounded-md py-1 pl-2 w-full'/>
-                         <p className='error'>{error.firstName}</p>
-                    </label>
+                    <div className='relative'>
+                        <label htmlFor="" className='font-semibold text-gray-500 text-[16px] w-full relative'> First Name
+                            <input type="text" placeholder='Enter Name' name="firstName" value={formValue.firstName} onChange={handleChange} className='border-2 border-gray-300 rounded-md py-1 pl-2 w-full'/>
+                        </label>
+                        <p className='error'>{error.firstName}</p>
+                    </div>
+
                    
                     {/* last name */}
-                    <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'> Last Name
-                        <input type="text" placeholder='Enter Name' name="lastName" value={formValue.lastName} onChange={handleChange} className='border-2 border-gray-300 rounded-md py-1 pl-2 w-full'/>
-                        <p className='error'>{error.lastName}</p>
-                    </label>
+                    <div className='relative'>
+                        <label htmlFor="" className='font-semibold text-gray-500 text-[16px] w-full relative'> Last Name
+                            <input type="text" placeholder='Enter Name' name="lastName" value={formValue.lastName} onChange={handleChange} className='border-2 border-gray-300 rounded-md py-1 pl-2 w-full'/>
+                        </label>
+                         <p className='error'>{error.lastName}</p>
+                    </div>
+                    
                     
                     </div> 
                     {/* email */}
-                    <div>
-                        <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'>Email
+                    <div className='relative'>
+                        <label htmlFor="" className='font-semibold text-gray-500 text-[16px] w-full relative'>Email
                             <input type="email" placeholder='Enter your Email' name="email" value={formValue.email} onChange={handleChange} className='border-2 border-gray-300 rounded-md py-1 pl-2 w-full'/>
-                            <p className='error'>{error.email}</p>
                         </label>
+                            <p className='error'>{error.email}</p>
+
                     </div>
 
                     {/* password */}
-                    <div>
-                        <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'>Password
+                    <div className='relative'>
+                        <label htmlFor="" className='font-semibold text-gray-500 text-[16px] w-full relative'>Password
                             <input type="password" placeholder='Enter your password' name="password" value={formValue.password} onChange={handleChange} className='border-2 border-gray-300 rounded-md py-1 pl-2 w-full' />
-                            <p className='error'>{error.password}</p>
                         </label>
+                            <p className='error'>{error.password}</p>
+
                     </div>
                     
                     {/* confirm password */}
-                    <div>
-                        <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'>Confirm Password
+                    <div className='relative'>
+                        <label htmlFor="" className='font-semibold text-gray-500 text-[16px] w-full relative'>Confirm Password
                             <input type="password" placeholder='comfirm your password' name="confirmPassword" value={formValue.confirmPassword} onChange={handleChange} className='border-2 border-gray-300 rounded-md py-1 pl-2 w-full' />
-                            <p className='error'>{error.confirmPassword}</p>
                         </label>
+                            <p className='error'>{error.confirmPassword}</p>
                     </div>
                     
                     {/* terms of service */}
-                    <span className='flex cursor-not-allowed font-semibold text-gray-500 text-sm gap-2 py-2'>
+                    <span className='flex cursor-not-allowed font-semibold text-gray-500 text-[16px] gap-2 py-2'>
                         <input type="checkbox" name="" id="" />
                         <p>I agree to <span className='text-[hsla(153,43%,42%,1)] '>terms of sevice</span> and <span className='text-[hsla(153,43%,42%,1)] '>privacy policies</span></p>
                     </span>
@@ -140,7 +148,7 @@ const SignUp = () => {
                 </div>
                 {/* google */}
                 <button className=' py-1.5 cursor-not-allowed border-2 border-gray-500 text-gray-500 font-semibold w-full rounded-md '>
-                    <span className='flex gap-3 w-full justify-center items-center text-sm py-1'>
+                    <span className='flex gap-3 w-full justify-center items-center text-[16px] py-1'>
                         <img src={google} alt="" className='size-4' />
                         <p>Continue with Google</p>
                     </span>
