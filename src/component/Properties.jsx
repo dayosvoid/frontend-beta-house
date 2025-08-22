@@ -7,6 +7,8 @@ import bath from "../assets/property/bed.png";
 import link from "../assets/property/link.png";
 import share from "../assets/share.png";
 import love from "../assets/property/love.png";
+import arrow from '../assets/carousel/arrow.png'
+import arrowww from '../assets/carousel/arrowww.png'
 import { ChevronDown } from "lucide-react";
 import { BounceLoader } from "react-spinners";
 
@@ -191,7 +193,9 @@ const Properties = () => {
       </div>
 
       {/* Popular Properties Carousel */}
-      <div className="flex flex-col justify-center items-center gap-10">
+      <div className="flex flex-col px-[20px] justify-center items-center gap-10 relative">
+        <div className="absolute right-[0%] top-1/2 translate-y-1/2 "><img src={arrow} alt="" className="size-[40px]" /></div>
+        <div className="absolute left-[0%] top-1/2 translate-y-1/2"><img src={arrowww} alt="" className="size-[40px]"/></div>
         <h2 className="font-semibold text-2xl md:text-4xl text-center">
           Discover Our Popular Properties
         </h2>
