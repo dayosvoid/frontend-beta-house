@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import Api from "../data/Carosel.data";
 import filter from "../assets/filter.png";
-import location from "../assets/location";
+import location from "../assets/location.png";
 import bed from "../assets/bed.png";
 import bath from "../assets/bath.png";
 import link from "../assets/link.png";
-import share from "../assets/share-icon.png";
+import share from "../assets/share.png";
 import love from "../assets/love.png";
 import { ChevronDown } from "lucide-react";
 import { BounceLoader } from "react-spinners";

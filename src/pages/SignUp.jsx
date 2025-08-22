@@ -149,7 +149,7 @@ const SignUp = () => {
 
                 {/* OR/hr */}
 
-                <p className='w-full text-center font-semibold text-[12px] text-gray-500 py-5'>Already have an account? <span className='text-[hsla(153,43%,42%,1)]'>Sign in</span></p>
+             <p className='w-full text-center font-semibold text-[12px] text-gray-500 py-5'>Already have an account? <span className='text-[hsla(153,43%,42%,1)]'>Sign in</span></p>
             </div>
             {/*the image for desktop  */}
             <div className=' hidden md:flex w-[50%]'>

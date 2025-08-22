@@ -7,7 +7,7 @@
 
 .hero-section {
   position: relative;
-  background-image: url("../src/assets/Hero-nav-bg.jpg");
+  background-image: url("../src/assets/heronav.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -28,7 +28,7 @@
 }
 
 .signIn{
-    background-image: url('./assets/SignIn/Signin.png');
+    background-image: url('./assets/signin/signin.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
