@@ -12,6 +12,7 @@ import arrowww from '../assets/carousel/arrowww.png'
 import cam from '../assets/property/cam.png'
 import img from '../assets/property/img.png' 
 import chain from '../assets/property/chain.png'
+import icon from '../assets/carousel/icon.png'
 import { ChevronDown } from "lucide-react";
 import { BounceLoader } from "react-spinners";
 
@@ -206,14 +207,24 @@ const Properties = () => {
 
       {/* Popular Properties Carousel */}
       <div className="flex flex-col px-[20px] justify-center items-center gap-10 relative">
-        <div className="absolute right-[0%] top-1/2 translate-y-1/2 cursor-not-allowed "><img src={arrow} alt="" className="size-[40px]" /></div>
-        <div className="absolute left-[0%] top-1/2 translate-y-1/2 cursor-not-allowed"><img src={arrowww} alt="" className="size-[40px]"/></div>
+        <div className="absolute right-[0%] top-1/2 translate-y-1/2 cursor-not-allowed z-8 "><img src={arrow} alt="" className="size-[40px]" /></div>
+        <div className="absolute left-[0%] top-1/2 translate-y-1/2 cursor-not-allowed z-8"><img src={arrowww} alt="" className="size-[40px]"/></div>
         <h2 className="font-semibold text-2xl md:text-4xl text-center">
           Discover Our Popular Properties
         </h2>
-        <div className="flex justify-center gap-2 w-full">
+        <div className="flex justify-center gap-2 w-full ">
           {Api.map((carousel) => (
-            <div key={carousel.price}>
+            <div key={carousel.price} className="relative">
+                <div className="px-3 hidden lg:flex gap-2 flex flex-col justify-center bg-white/20 backdrop-blur-[2px] text-white lg:font-semibold absolute bottom-0 left-0 right-0 h-[55%] w-full z-5 ">
+                <p>Twin Duplex</p>
+                <p>N 290,000,00</p>
+                <span className="flex flex-row gap-3 font-regular items-center w-full ">
+                    <small>6 Bed</small>
+                    <small>3 Bath</small>
+                    <small>720 sq ft</small>
+                </span>
+                <span className="flex items-center gap-3"><img src={icon} alt="" className="text-white"/><p className="text-[12px] font-light">Victoria island,lagos</p></span>
+                </div>
               <div className="flex gap-2">
                 <span className="w-full">
                   <img
