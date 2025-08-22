@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Api from "../data/Carosel.data";
 import filterIcon from "../assets/filtericon.png";
-import locationIcon from "../assets/locationicon.png";
+import locationIcon from "../assets/location-icon.png";
 import bedIcon from "../assets/bedicon.png";
 import bathIcon from "../assets/bathicon.png";
 import linkIcon from "../assets/link.png";
