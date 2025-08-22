@@ -9,6 +9,9 @@ import share from "../assets/share.png";
 import love from "../assets/property/love.png";
 import arrow from '../assets/carousel/arrow.png'
 import arrowww from '../assets/carousel/arrowww.png'
+import cam from '../assets/property/cam.png'
+import img from '../assets/property/img.png' 
+import chain from '../assets/property/chain.png'
 import { ChevronDown } from "lucide-react";
 import { BounceLoader } from "react-spinners";
 
@@ -105,7 +108,16 @@ const Properties = () => {
       {/* Properties Grid */}
       <div className="flex flex-col gap-4 md:grid grid-cols-2 lg:grid-cols-3">
         {fetchData.map((property) => (
-          <div key={property._id}>
+          <div key={property._id} className="relative">
+            <p className="absolute left-2 text-[12px] top-2 bg-[hsla(153,43%,42%,0.6)] p-1.5 text-white rounded-sm">Featured</p>
+            <p className="absolute right-2 text-[12px] top-2 bg-white/40 text-white p-1.5 rounded-sm">For rent</p>
+
+            {/* the three images on the picture */}
+            <div className="absolute flex gap-3 right-2 bottom-[50%]">
+                <span className="bg-white/40 p-2 rounded-md"><img src={chain} alt="" /></span>
+                <span className="bg-white/40 p-2 rounded-md"><img src={cam} alt="" /></span>
+                <span className="bg-white/40 p-2 rounded-md"><img src={img} alt="" /></span>
+            </div>
             <div>
               {/* image */}
               <span className="rounded-t-md min-w-[200%] md:max-size-[230px]">
