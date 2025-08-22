@@ -217,13 +217,13 @@ const Properties = () => {
             <div key={carousel.price} className="relative">
                 <div className="px-3 hidden lg:flex gap-2 flex flex-col justify-center bg-white/20 backdrop-blur-[2px] text-white lg:font-semibold absolute bottom-0 left-0 right-0 h-[55%] w-full z-5 ">
                 <p>Twin Duplex</p>
-                <p>N 290,000,00</p>
-                <span className="flex flex-row gap-3 font-regular items-center w-full ">
-                    <small>6 Bed</small>
+                <p>{carousel.price}</p>
+                <span className="flex flex-row gap-3 font-light text-[12px] font-regular items-center w-full ">
+                    <small >6 Bed</small>
                     <small>3 Bath</small>
                     <small>720 sq ft</small>
                 </span>
-                <span className="flex items-center gap-3"><img src={icon} alt="" className="text-white"/><p className="text-[12px] font-light text-nowrap">Victoria island,lagos</p></span>
+                <span className="flex items-center gap-2"><img src={icon} alt="" className="text-white"/><p className="text-[12px] font-light text-nowrap">Victoria island,lagos</p></span>
                 </div>
               <div className="flex gap-2">
                 <span className="w-full">
