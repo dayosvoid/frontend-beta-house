@@ -10,7 +10,7 @@ const Nav = () => {
     
   return (
     <div className='container mx-auto w-11/12 relative'>
-        <nav className='flex justify-between md:justify-between py-4 items-center'>
+        <nav className='flex justify-between md:justify-between py-4 pt-7 items-center'>
             {/* logo (left section) */}
             <div className='flex items-center gap-5 md:w-full'>
                 <span className='max-w-[200px] md:min-w-[180px]'><img src={logo} alt="logo" className='cursor-not-allowed '/></span>
