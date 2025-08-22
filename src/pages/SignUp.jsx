@@ -86,7 +86,7 @@ const SignUp = () => {
             <div className='flex flex-col justify-center items-center py-10 space-y-2 h-full md:w-[50%] md:px-5'>
                 <h2 className='font-bold text-center text-gray-800 md:text-start'>Join our community of home seekers and explore the possibilities that await. </h2>
                 <p className='w-full text-[12px] text-center font-semibold text-gray-500 md:text-start'>Lets get started by filling out the information below</p>
-                <form onSubmit={handleSubmit}className='pt-5 space-y-1.5 w-full '>
+                <form onSubmit={handleSubmit}className='pt-5 space-y-1.5 text-[16px] w-full '>
                    <div className='flex gap-4 w-full '>
                     {/* first name */}
                     <label htmlFor="" className='font-semibold text-gray-500 text-sm w-full relative'> First Name

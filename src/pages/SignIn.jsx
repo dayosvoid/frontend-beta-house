@@ -97,7 +97,7 @@ const SignIn = () => {
                     <h2 className='font-bold text-center text-gray-800'>Welcome Back to BetaHouse!</h2>
                     <p className='text-[12px] text-center font-semibold text-gray-500'>Let's get started by filling out the information below</p>
                     
-                    <form onSubmit={handleSubmit} className='pt-5 relative w-full max-w-md space-y-4'>
+                    <form onSubmit={handleSubmit} className='pt-5 relative text-[16px] w-full max-w-md space-y-4'>
                         {/* API Error/Success Message */}
                         {errors.api && (
                             <div className={`text-center absolute w-[50%] left-1/2 -translate-x-1/2 top-[-2px] p-1 rounded-md ${
