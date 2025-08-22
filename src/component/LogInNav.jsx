@@ -14,7 +14,7 @@ const LoginNav = () => {
                {/* logo (left section) */}
                <div className='flex items-center gap-5 md:w-full'>
                     <span><img src="" alt="" /></span>
-                   <span className='max-w-[130px] md:min-w-[180px]'><img src={logo} alt="logo" className='cursor-not-allowed'/></span>   
+                   <span className='max-w-[200px] md:min-w-[180px]'><img src={logo} alt="logo" className='cursor-not-allowed'/></span>   
                </div>
    
                     <ul className='hidden md:flex md:text-[16px] lg-[25px] md:space-x-3 lg:space-x-5  flex font-semibold text-white items-center md:justify-between w-full'>
