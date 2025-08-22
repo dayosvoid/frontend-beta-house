@@ -81,7 +81,7 @@ const Properties = () => {
         <div className="md:flex gap-3">
           <p>Sort by:</p>
           <button className="flex items-center">
-            Default <ChevronDown className="size-[15px] md:size-[20px]" />
+            Default <ChevronDown className="size-[14px] md:size-[20px]" />
           </button>
         </div>
       </div>
