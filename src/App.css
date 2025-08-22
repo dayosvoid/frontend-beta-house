@@ -35,12 +35,12 @@
 }
 
 .error{
-    font-size: 10px;
+    font-size: 12px;
     font-weight: 500;
     color: rgb(241, 107, 107);
     text-wrap: nowrap;
     position: absolute;
-    bottom: -1;
+    bottom: -3;
     left: 0;
     text-align: end;
     width: 100%;
