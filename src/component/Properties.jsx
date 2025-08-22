@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from "react";
 import Api from "../data/Carosel.data";
-import filterIcon from "../assets/filtericon.png";
-import locationIcon from "../assets/location-icon.png";
-import bedIcon from "../assets/bedicon.png";
-import bathIcon from "../assets/bathicon.png";
-import linkIcon from "../assets/link.png";
-import shareIcon from "../assets/share-icon.png";
-import loveIcon from "../assets/love-icon.png";
+import filter from "../assets/filter.png";
+import location from "../assets/location";
+import bed from "../assets/bed.png";
+import bath from "../assets/bath.png";
+import link from "../assets/link.png";
+import share from "../assets/share-icon.png";
+import love from "../assets/love.png";
 import { ChevronDown } from "lucide-react";
 import { BounceLoader } from "react-spinners";
 
@@ -68,7 +68,7 @@ const Properties = () => {
         <div className="md:flex gap-3">
           <button className="flex gap-2 justify-center items-center">
             <img
-              src={filterIcon}
+              src={filter}
               alt=""
               className="size-[15px] md:size-[20px]"
             />
@@ -79,7 +79,6 @@ const Properties = () => {
             </p>   
         </div>
         <div className="md:flex gap-3">
-          <p>Sort by:</p>
           <button className="flex items-center">
             Default <ChevronDown className="size-[14px] md:size-[20px]" />
           </button>
@@ -123,7 +122,7 @@ const Properties = () => {
 
                   <div className="flex gap-2 text-gray-500 text-[12px]">
                     <span className="size-[10px] grid place-items-center pt-2">
-                      <img src={locationIcon} alt="img" className="w-[8px]" />
+                      <img src={location} alt="img" className="w-[8px]" />
                     </span>
                     <span>
                       <p>{property.location}</p>
@@ -134,7 +133,7 @@ const Properties = () => {
                 <div className="flex w-[80%] justify-between text-gray-500 text-[12px]">
                   <span className="flex gap-2 items-center">
                     <span className="size-[18px]">
-                      <img src={bedIcon} alt="img" />
+                      <img src={bed} alt="img" />
                     </span>
                     <p className="font-semibold">
                       {property.description?.bedRoom} Bedrooms
@@ -142,7 +141,7 @@ const Properties = () => {
                   </span>
                   <span className="flex gap-2 items-center">
                     <span className="size-[18px]">
-                      <img src={bathIcon} alt="img" />
+                      <img src={bath} alt="img" />
                     </span>
                     <p className="font-semibold">
                       {property.description?.bathRoom} Bathrooms
@@ -158,13 +157,13 @@ const Properties = () => {
                   </div>
                   <div className="flex justify-between w-[50%]">
                     <span>
-                      <img src={linkIcon} alt="" />
+                      <img src={link} alt="" />
                     </span>
                     <span>
-                      <img src={shareIcon} alt="" />
+                      <img src={share} alt="" />
                     </span>
                     <span>
-                      <img src={loveIcon} alt="" />
+                      <img src={love} alt="" />
                     </span>
                   </div>
                 </div>
