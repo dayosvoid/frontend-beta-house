@@ -1,7 +1,7 @@
 import React from 'react'
 import logo from "../assets/logo.png"
 import message from "../assets/footer/message.png"
-import location from "../assets/footer/icon.png"
+import location from "../assets/location-icon.png"
 import call from "../assets/footer/call.png"
 
 
