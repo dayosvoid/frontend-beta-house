@@ -223,7 +223,7 @@ const Properties = () => {
                     <small>3 Bath</small>
                     <small>720 sq ft</small>
                 </span>
-                <span className="flex items-center gap-3"><img src={icon} alt="" className="text-white"/><p className="text-[12px] font-light">Victoria island,lagos</p></span>
+                <span className="flex items-center gap-3"><img src={icon} alt="" className="text-white"/><p className="text-[12px] font-light text-nowrap">Victoria island,lagos</p></span>
                 </div>
               <div className="flex gap-2">
                 <span className="w-full">
