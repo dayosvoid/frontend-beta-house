@@ -135,13 +135,13 @@ const Properties = () => {
                     {property.name}
                   </h2>
 
-                  <div className="flex gap-2 text-gray-500 text-[12px]">
-                    <span className="size-[10px] grid place-items-center pt-2">
+                  <div className="flex gap-2 items-center text-gray-500 text-[12px]">
+                    <div className="size-[10px]">
                       <img src={location} alt="img" className="w-[8px]" />
-                    </span>
-                    <span>
+                    </div>
+                    <div className="w-full">
                       <p>{property.location}</p>
-                    </span>
+                    </div>
                   </div>
                 </span>
 
