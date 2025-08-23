@@ -1,5 +1,8 @@
 # React + Vite
 
+https://frontend-beta-house-vb16.vercel.app/
+https://eloquent-khapse-9e4d31.netlify.app/
+
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
 Currently, two official plugins are available:
