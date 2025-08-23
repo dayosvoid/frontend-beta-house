@@ -41,7 +41,7 @@ const Nav = () => {
         </nav>
         {
             menu && 
-            <div className='flex flex-col gap-8 text-white bg-[hsla(152,43%,19%,0.80)] font-bold text-center w-full py-10 px-5 absolute rounded-md rounded-b-r-full md:hidden z-2'>
+            <div className='flex flex-col gap-8 text-white backdrop-blur-md bg-[hsla(152,43%,19%,0.50)] font-bold text-center w-full py-10 px-5 absolute rounded-md rounded-b-r-full md:hidden z-2'>
                 <ul className='space-y-4' >
                      <li className=' cursor-not-allowed'>Home</li>
                     <li className='cursor-not-allowed'>Properties</li>
@@ -50,7 +50,7 @@ const Nav = () => {
                     <li className=' cursor-not-allowed'>Contact Us</li>
                 </ul>
                {/* the thin horizontal line  in the dropdown menu  */}
-               <div className='w-full border border-gray-600 '></div>
+               <div className='w-full border border-gray-200 '></div>
                <div className='flex flex-col gap-4  '>
                 <Link to='/login'><button  className='text-white hover:text-black cursor-pointer cursor-not-allowed' >Login</button></Link>
                <Link to='/SignUp'><button  className='bg-[hsla(155,41%,11%,1.00)] py-2 w-full rounded-full cursor-not-allowed'>Sign up</button></Link> 
