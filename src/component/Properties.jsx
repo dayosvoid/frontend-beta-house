@@ -88,9 +88,11 @@ const Properties = () => {
             />
             More Filter
           </button>
-                    <p>
-            Showing {fetchData.length} of {totalItems} results
-            </p>   
+           <p>{ numberOfPages !== 0 ?
+                `Showing ${(pageNum - 1) * 9 + 1} - ${Math.min(pageNum * 9, totalItems)} of ${totalItems} results` : "No available pduct"
+                }
+            </p>
+ 
         </div>
         <div className="md:flex gap-3">
           <button className="flex cursor-not-allowed items-center">
