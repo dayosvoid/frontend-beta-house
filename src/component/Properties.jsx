@@ -212,7 +212,11 @@ const Properties = () => {
             {pageIndex}
           </button>
         ))}
-          {pageNum !== numberOfPages && <button onClick={next}><ChevronRight/></button>}
+          {numberOfPages > 1 && pageNum < numberOfPages && (
+         <button onClick={next}>
+        <ChevronRight />
+    </button>
+)}
       </div>
 
       {/* Popular Properties Carousel */}
