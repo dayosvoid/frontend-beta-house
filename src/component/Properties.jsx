@@ -13,7 +13,7 @@ import cam from '../assets/property/cam.png'
 import img from '../assets/property/img.png' 
 import chain from '../assets/property/chain.png'
 import icon from '../assets/carousel/icon.png'
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { BounceLoader } from "react-spinners";
 
 const Properties = () => {
@@ -66,6 +66,14 @@ const Properties = () => {
 
     fetchProperties();
   }, [pageNum]);
+
+    //   the next and prev button
+    const prev = ()=>{
+        setPageNum(Math.max(0,pageNum - 1))
+    }
+    const next = () => {
+    setPageNum( Math.min(pageNum + 1));
+};
 
   return (
     <div className="container mx-auto w-11/12 my-15">
@@ -189,7 +197,8 @@ const Properties = () => {
       </div>
 
       {/* Pagination */}
-      <div className="flex w-full justify-center py-10 font-semibold gap-2">
+      <div className="flex w-full items-center justify-center py-10 font-semibold gap-2">
+        {pageNum === 2 && <button onClick={prev}><ChevronLeft/></button> }
         {pages.map((pageIndex) => (
           <button
             key={pageIndex}
@@ -203,6 +212,7 @@ const Properties = () => {
             {pageIndex}
           </button>
         ))}
+          {pageNum !== numberOfPages && <button onClick={next}><ChevronRight/></button>}
       </div>
 
       {/* Popular Properties Carousel */}
