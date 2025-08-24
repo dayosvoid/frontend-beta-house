@@ -89,7 +89,7 @@ const Properties = () => {
             More Filter
           </button>
            <p>{ numberOfPages !== 0 ?
-                `Showing ${(pageNum - 1) * 9 + 1} - ${Math.min(pageNum * 9, totalItems)} of ${totalItems} results` : "No available pduct"
+                `Showing ${(pageNum - 1) * 9 + 1} - ${Math.min(pageNum * 9, totalItems)} of ${totalItems} results` : "No available product"
                 }
             </p>
  
