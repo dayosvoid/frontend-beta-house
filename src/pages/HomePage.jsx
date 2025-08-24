@@ -5,6 +5,7 @@ import Properties from '../component/Properties'
 import Footer from '../component/Footer'
 import LoginNav from '../component/LogInNav'
 
+
 const HomePage = () => {
   return (
     <div>

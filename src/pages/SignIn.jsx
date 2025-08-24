@@ -3,13 +3,19 @@ import { useEffect, useState } from 'react'
 import google from '../assets/signin/google.png'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import { useAuth } from '../context/AuthContext'
 
 const SignIn = () => {
+     const { auth, setAuth } = useAuth()
     const navigate = useNavigate()
+
+
     const initialState = {
         email: "",
         password: "",
     }
+
+
     const [formValue, setFormValue] = useState(initialState)
     const [errors, setErrors] = useState({})
     const [isSubmit, setIsSubmit] = useState(false)
@@ -41,6 +47,7 @@ const SignIn = () => {
                     setIsLoading(false); 
                     
                     if (result.data.success === true) {
+                        setAuth(true)
                           navigate('/HomePage')
                     } else {
                         setErrors({ api: { type: 'error', message: result.data.message || "Login failed." } });

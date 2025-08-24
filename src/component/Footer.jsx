@@ -63,14 +63,15 @@ const Footer = () => {
                 </div>
 
             </div>
-            {/* laptop screeb horizontal link */}
-            <div className='w-full border-t border-white '></div>
+
             {/* last section */}
             <div className='text-center space-y-4 md:flex justify-between md:px-10 pt-5'>
                 <p>Copyright 2023 Betahouse | Designed by Micheal.fig</p>
                 <span className='cursor-not-allowed'>Privacy Policy</span>
             </div>
         </div>
+                    {/* laptop screeb horizontal link */}
+            <div className='min-w-full border-t border-gray-300  relative bottom-[120px] md:bottom-[90px] '></div>
     </div>
   )
 }

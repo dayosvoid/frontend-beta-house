@@ -3,7 +3,7 @@ import Api from "../data/Carosel.data";
 import filter from "../assets/property/filter.png";
 import location from "../assets/location.png";
 import bed from "../assets/property/bed.png";
-import bath from "../assets/property/bed.png";
+import bath from "../assets/property/bath.png";
 import link from "../assets/property/link.png";
 import share from "../assets/share.png";
 import love from "../assets/property/love.png";
