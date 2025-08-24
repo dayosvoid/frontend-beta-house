@@ -65,7 +65,7 @@ const LoginNav = () => {
                {/* the thin horizontal line  in the dropdown menu  */}
                <div className='w-full border border-gray-200 '></div>
                <div className='flex flex-col gap-4  '>
-                <button onClick={handleLogout} className='text-white px-5 py-2 bg-red-400 hover:text-black cursor-pointer cursor-pointer rounded-md' >Log Out</button>
+                <button onClick={handleLogout} className='text-white px-5 py-2 bg-red-400 hover:text-black cursor-pointer cursor-pointer rounded-md' >Sign Out</button>
                {/* <Link to='/SignUp'><button  className='bg-[hsla(155,41%,11%,1.00)] py-2 w-full rounded-full cursor-not-allowed'></button></Link>  */}
                </div>
             </div>

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import google  from '../assets/signin/google.png'
 import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import logo from "../assets/logo.png"
+
 
 const SignUp = () => {
   const navigate = useNavigate()
@@ -96,8 +98,20 @@ const validate = (value) => {
   return (
     <div className='md:relative h-full md:min-h-screen'>
         <div className='md:flex container w-11/12 md:min-w-11/12 min-h-screen items-center mx-auto gap-10'>
+
+            {/* logo */}
+            <div className='flex justify-center md:hidden'>
+                <Link to='/'><span className='max-w-[150px] md:min-w-[100px] py-3 items-center md:hidden cursor-pointer flex '>
+                    <div className='bg-[hsla(153,43%,42%,1)] rounded-full p-1 flex items-center'>
+                        <p className='font-semibold text-white text-xl'>BH</p>
+                    </div>
+                    <p className='font-semibold text-gray-700 text-xl'>BetaHouse</p>
+                </span> </Link>
+            </div>
+
+
             {/* mobile just form*/}
-            <div className='flex flex-col justify-center text-[16px] items-center py-10 space-y-2 h-full md:w-[50%]'>
+            <div className='flex flex-col justify-center text-[16px] items-center pb-10 pt-2 space-y-2 h-full md:w-[50%]'>
                 <h2 className='font-bold text-center text-gray-800 md:text-start'>Join our community of home seekers and explore the possibilities that await. </h2>
                 <p className='w-full text-[12px] text-center font-semibold text-gray-500 md:text-start'>Lets get started by filling out the information below</p>
                 <form onSubmit={handleSubmit}className='pt-5 space-y-1.5 text-[16px] w-full '>
@@ -153,7 +167,8 @@ const validate = (value) => {
                         <p>I agree to <span className='text-[hsla(153,43%,42%,1)] '>terms of sevice</span> and <span className='text-[hsla(153,43%,42%,1)] '>privacy policies</span></p>
                     </span>
                     {/* button/sign in */}
-                    <button className=' py-1.5 bg-[hsla(153,43%,42%,1)] text-white font-semibold w-full rounded-md my-1 '>Sign up</button>
+                    
+                    <button className=' py-1.5 bg-[hsla(153,43%,42%,1)] text-white font-semibold w-full rounded-md my-1 '>{loader ? 'Signing Up...':'Sign Up'}</button>
 
                     <div className='flex items-center gap-3'>
                     <span className='border-t border-gray-500 w-full'></span>
@@ -179,7 +194,9 @@ const validate = (value) => {
             </div>
             {/* <div className='signIn relative top-0 bottom-0 left-1/2 right-0'></div> */}
         </div>
-        <div className='signIn absolute top-0 bottom-0 right-0 left-[50%] hidden md:flex w-[50%]'></div>
+        <div className='signIn absolute top-0 bottom-0 right-0 left-[50%] hidden md:flex w-[50%]'>
+            <Link to='/'><span className='max-w-[150px] md:min-w-[100px] absolute left-10 cursor-pointer z-100 top-10'><img src={logo} alt="logo" className=''/></span> </Link>
+        </div>
     </div>
   )
 }

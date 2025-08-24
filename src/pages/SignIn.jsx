@@ -4,6 +4,7 @@ import google from '../assets/signin/google.png'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
 import { useAuth } from '../context/AuthContext'
+import logo from "../assets/logo.png"
 
 const SignIn = () => {
      const { auth, setAuth } = useAuth()
@@ -99,8 +100,18 @@ const SignIn = () => {
     return (
         <div className='md:relative h-full md:min-h-screen'>
             <div className='md:flex container w-11/12 md:min-w-11/12 min-h-screen items-center mx-auto gap-5'>
+
+                {/* logo */}
+                <div className='flex justify-center md:hidden'>
+                    <Link to='/'><span className='max-w-[150px] md:min-w-[100px] py-3 items-center md:hidden cursor-pointer flex '>
+                        <div className='bg-[hsla(153,43%,42%,1)] rounded-full p-1 flex items-center'>
+                            <p className='font-semibold text-white text-xl'>BH</p>
+                        </div>
+                        <p className='font-semibold text-gray-700 text-xl'>BetaHouse</p>
+                    </span> </Link>
+                </div>
                 {/* Form section */}
-                <div className='flex flex-col justify-center text-[16px] items-center py-10 space-y-2 h-full md:w-[50%]'>
+                <div className='flex flex-col justify-center text-[16px] items-center pb-10 pt-2 space-y-2 h-full md:w-[50%]'>
                     <h2 className='font-bold text-center text-gray-800'>Welcome Back to BetaHouse!</h2>
                     <p className='text-[12px] text-center font-semibold text-gray-500'>Let's get started by filling out the information below</p>
                     
@@ -201,13 +212,16 @@ const SignIn = () => {
                 </div>
                 
                 {/* Image section for desktop */}
-                <div className='hidden md:flex w-[50%]'>
-                    {/* Background image content */}
-                </div>
+                 <div className=' hidden md:flex w-[50%]'>
+                {/* <div className='signIn absolute top-0 bottom-0 left-[ right-[-100px] w-200'></div> */}
+            </div>
+
             </div>
             
             {/* Background decoration */}
-            <div className='signIn absolute top-0 bottom-0 right-0 left-[50%] hidden md:flex w-[50%]'></div>
+            <div className='signIn absolute top-0 bottom-0 right-0 left-[50%] hidden md:flex w-[50%]'>
+                <Link to='/'><span className='max-w-[150px] md:min-w-[100px] absolute left-10 cursor-pointer z-100 top-10'><img src={logo} alt="logo" className=''/></span> </Link>
+            </div>
         </div>
     )
 }
