@@ -15,6 +15,10 @@ import chain from '../assets/property/chain.png'
 import icon from '../assets/carousel/icon.png'
 import { ChevronDown, ChevronLeft, ChevronRight } from "lucide-react";
 import { BounceLoader } from "react-spinners";
+import { propertiesData } from "../apiCall.js/properties";
+import PopularCarousel from "./PopularProperties";
+import PopularProperties from "./PopularProperties";
+
 
 const Properties = () => {
     const [totalItems, setTotalItems] = useState(0);
@@ -32,24 +36,22 @@ const Properties = () => {
       setError("");
 
       try {
-        const res = await fetch(
-          `https://backend-beta-house.onrender.com/allProperties?page=${pageNum}`
-        );
+        const res = await propertiesData(pageNum);
 
-        if (!res.ok) {
-          throw new Error(
-            res.status === 404
-              ? "Properties not found"
-              : res.status >= 500
-              ? "Server error. Please try again later."
-            : `Error: ${res.status}`
-          );
-        }
+        // if (!res.ok) {
+        //   throw new Error(
+        //     res.status === 404
+        //       ? "Properties not found"
+        //       : res.status >= 500
+        //       ? "Server error. Please try again later."
+        //     : `Error: ${res.status}`
+        //   );
+        // }
 
-        const data = await res.json();
+        const data = res;
         console.log(data);
 
-         if (data.success && data.properties) {
+         if (res.success && data.properties) {
         setFetchData(data.properties);
         setNumberOfPages(data.totalPages);
         setTotalItems(data.totalItems); 
@@ -68,12 +70,13 @@ const Properties = () => {
   }, [pageNum]);
 
     //   the next and prev button
-    const prev = ()=>{
-        setPageNum(Math.max(0,pageNum - 1))
-    }
-    const next = () => {
-    setPageNum( Math.min(pageNum + 1));
+   const prev = () => {
+    if (pageNum > 1) setPageNum(pageNum - 1);
 };
+
+const next = () => {
+    if (pageNum < numberOfPages) setPageNum(pageNum + 1);
+}
 
   return (
     <div className="container mx-auto w-11/12 my-15">
@@ -88,8 +91,10 @@ const Properties = () => {
             />
             More Filter
           </button>
-           <p>{ numberOfPages !== 0 ?
-                `Showing ${(pageNum - 1) * 9 + 1} - ${Math.min(pageNum * 9, totalItems)} of ${totalItems} results` : "No available product"
+            <p>
+                {totalItems > 0
+                    ? `Showing ${pageNum * 9 + 1} - ${Math.min((pageNum + 1) * 9, totalItems)} of ${totalItems} results`
+                    : "No results found"
                 }
             </p>
  
@@ -200,60 +205,34 @@ const Properties = () => {
 
       {/* Pagination */}
       <div className="flex w-full items-center justify-center py-10 font-semibold gap-2">
-        {pageNum === 2 && <button onClick={prev}><ChevronLeft/></button> }
-        {pages.map((pageIndex) => (
-          <button
-            key={pageIndex}
-            onClick={() => setPageNum(pageIndex)}
-            className={`px-3 py-1 rounded cursor-pointer ${
-              pageNum === pageIndex
-                ? "bg-green-600 text-white"
-                : "bg-gray-200 hover:bg-gray-300"
-            }`}
-          >
-            {pageIndex}
-          </button>
-        ))}
-          {numberOfPages > 1 && pageNum < numberOfPages && (
-         <button onClick={next}>
-        <ChevronRight />
+  {/* Only show Prev if we aren't on page 1 */}
+  {pageNum > 1 && (
+    <button onClick={prev} className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">
+      <ChevronLeft />
     </button>
-)}
-      </div>
+  )}
 
-      {/* Popular Properties Carousel */}
-      <div className="flex flex-col px-[20px] justify-center items-center gap-10 relative">
-        <div className="absolute right-[0%] top-1/2 translate-y-1/2 cursor-not-allowed z-8 "><img src={arrow} alt="" className="size-[40px]" /></div>
-        <div className="absolute left-[0%] top-1/2 translate-y-1/2 cursor-not-allowed z-8"><img src={arrowww} alt="" className="size-[40px]"/></div>
-        <h2 className="font-semibold text-2xl md:text-4xl text-center">
-          Discover Our Popular Properties
-        </h2>
-        <div className="flex justify-center gap-2 w-full ">
-          {Api.map((carousel) => (
-            <div key={carousel.price} className="relative">
-                <div className="px-3 hidden lg:flex gap-2 flex flex-col justify-center bg-white/20 backdrop-blur-[2px] text-white lg:font-semibold absolute bottom-0 left-0 right-0 h-[55%] w-full z-5 ">
-                <p>Twin Duplex</p>
-                <p>{carousel.price}</p>
-                <span className="flex flex-row gap-3 font-light text-[12px] font-regular items-center w-full ">
-                    <small >6 Bed</small>
-                    <small>3 Bath</small>
-                    <small>720 sq ft</small>
-                </span>
-                <span className="flex items-center gap-2"><img src={icon} alt="" className="text-white"/><p className="text-[12px] font-light text-nowrap">Victoria island,lagos</p></span>
-                </div>
-              <div className="flex gap-2">
-                <span className="w-full">
-                  <img
-                    src={carousel.img}
-                    alt="img"
-                    className="min-h-[170px] min-w-[50px] md:min-h-[230px] md:max-h-[300px] max-w-full rounded-lg"
-                  />
-                </span>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
+  {pages.map((pageIndex) => (
+    <button
+      key={pageIndex}
+      onClick={() => setPageNum(pageIndex)}
+      className={`px-3 py-1 rounded cursor-pointer ${
+        pageNum === pageIndex ? "bg-green-600 text-white" : "bg-gray-200 hover:bg-gray-300"
+      }`}
+    >
+      {pageIndex}
+    </button>
+  ))}
+
+  {/* Only show Next if we aren't on the last page */}
+  {pageNum < numberOfPages && (
+    <button onClick={next} className="px-3 py-1 bg-gray-200 rounded hover:bg-gray-300">
+      <ChevronRight />
+    </button>
+  )}
+</div>
+    <PopularProperties  properties={fetchData}/>
+
     </div>
   );
 };

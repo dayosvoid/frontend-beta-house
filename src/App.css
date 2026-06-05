@@ -1,9 +1,8 @@
 @import "tailwindcss";
-*{
-    /* border:1px solid blue; */
-    font-family: Outfit;
+* {
+  /* border:1px solid blue; */
+  font-family: Outfit;
 }
-
 
 .hero-section {
   position: relative;
@@ -27,21 +26,21 @@
   z-index: 2; /* Puts the content on top of the overlay */
 }
 
-.signIn{
-    background-image: url('./assets/signin/signin.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+.signIn {
+  background-image: url("./assets/signin/signin.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
-.error{
-    font-size: 12px;
-    font-weight: 500;
-    color: rgb(241, 107, 107);
-    text-wrap: nowrap;
-    position: absolute;
-    bottom: -15px;
-    left: 0;
-    text-align: end;
-    width: 100%;
+.error {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(241, 107, 107);
+  text-wrap: nowrap;
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  text-align: end;
+  width: 100%;
 }

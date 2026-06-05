@@ -1,6 +1,12 @@
 import React, { useState } from 'react'
+import { useContext } from 'react'
 
 const Hero = () => {
+    
+    
+
+
+
     const [bedRoom,setBedRoom]=useState(0)
     const [error, setError]=useState('')
 
