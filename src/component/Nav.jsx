@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 const Nav = () => {
     // state to manage the dropdown Menu
     const [menu,setMenu]=useState(false)
-    // console.log(menu);
     
   return (
     <div className='container mx-auto w-11/12 relative'>
